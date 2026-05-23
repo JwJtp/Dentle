@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <img src="images/logo.jpg" class="logo">
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olive Dental — Modern Dental Care</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -802,12 +804,12 @@ nav ul li a{
 }
 
 nav ul li a i{
-  color:#ff4fa3;
+  color:black;
   font-size:.9rem;
 }
 
 nav ul li a:hover{
-  color:#ff4fa3;
+  color:#0c0609;
   transform:translateY(-2px);
 }
 .logo-img{
@@ -900,6 +902,362 @@ nav ul li a:hover{
             0 0 50px #00e5ff;
     }
 }
+.nav-sparkle-logo{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+
+  box-shadow:
+    0 0 5px #fff,
+    0 0 15px #00ffcc,
+    0 0 25px #00ffff;
+
+  animation:logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow{
+
+  from{
+    box-shadow:
+      0 0 5px #fff,
+      0 0 15px #00ffcc,
+      0 0 25px green;
+  }
+
+  to{
+    box-shadow:
+      0 0 12px #fff,
+      0 0 28px #00ffcc,
+      0 0 50px green;
+  }
+}
+<!---new navbar>
+  /* =========================
+NAVBAR
+========================= */
+
+#navbar{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:14px 5%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  z-index:999;
+
+  background:rgba(10,10,10,0.88);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+LOGO
+========================= */
+
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  text-decoration:none;
+}
+
+/* ONLY NAVBAR LOGO */
+
+.nav-sparkle-logo{
+  width:72px;
+  height:72px;
+
+  border-radius:50%;
+  object-fit:cover;
+
+  border:2px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 0 5px #fff,
+    0 0 15px #00ffcc,
+    0 0 25px #00ffff;
+
+  animation:logoGlow 2s infinite alternate;
+
+  transition:.4s;
+}
+
+.nav-sparkle-logo:hover{
+  transform:scale(1.06);
+}
+
+@keyframes logoGlow{
+
+  from{
+    box-shadow:
+      0 0 5px #fff,
+      0 0 15px #00ffcc,
+      0 0 25px green;
+  }
+
+  to{
+    box-shadow:
+      0 0 12px #fff,
+      0 0 28px #00ffcc,
+      0 0 50px green;
+  }
+}
+
+/* =========================
+LOGO TEXT
+========================= */
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+
+  line-height:1.1;
+}
+
+.logo-text .main-logo{
+  font-size:30px;
+  font-weight:700;
+
+  color:green;
+
+  letter-spacing:.5px;
+}
+
+.logo-text .main-logo span{
+  color:#00ffcc;
+}
+
+/* SMALL TEXT UNDER LOGO */
+
+.logo-text .sub-logo{
+  font-size:12px;
+
+  color:green;
+
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  margin-top:3px;
+}
+
+/* =========================
+NAV LINKS
+========================= */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+
+  gap:28px;
+
+  list-style:none;
+}
+
+/* LINK */
+
+.nav-links a{
+  color:green;
+
+  text-decoration:none;
+
+  font-size:15px;
+  font-weight:500;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  transition:.3s;
+}
+
+/* ICON */
+
+.nav-links a i{
+  color:black;
+
+  font-size:14px;
+
+  transition:.3s;
+}
+
+/* HOVER */
+
+.nav-links a:hover{
+  color:#00ffcc;
+
+  transform:translateY(-2px);
+}
+
+.nav-links a:hover i{
+  color:white;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.nav-cta{
+  padding:12px 22px;
+
+  border:none;
+  border-radius:40px;
+
+  background:#00aa88;
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px) scale(1.05);
+
+  background:#00c9a7;
+}
+
+/* =========================
+HAMBURGER
+========================= */
+
+.hamburger{
+  display:none;
+
+  flex-direction:column;
+  gap:5px;
+
+  background:none;
+  border:none;
+
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:28px;
+  height:3px;
+
+  background:white;
+
+  border-radius:10px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+    position:absolute;
+
+    top:100%;
+    right:0;
+
+    width:280px;
+
+    background:#111;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:25px;
+
+    gap:20px;
+
+    display:none;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+
+  .nav-cta{
+    display:none;
+  }
+
+  .main-logo{
+    font-size:24px !important;
+  }
+
+  .sub-logo{
+    font-size:10px !important;
+  }
+}
+.logo-wrap{
+  position:relative;
+  display:inline-block;
+}
+
+/* STAR SPARKLES */
+.logo-wrap::before,
+.logo-wrap::after{
+
+  content:'✦';
+  
+
+  position:absolute;
+
+  color:white;
+
+  font-size:16px;
+
+  z-index:5;
+
+  text-shadow:
+    0 0 8px #00ffcc,
+    0 0 15px #00ffff,
+    0 0 22px white;
+
+  animation:sparkleMove 2s infinite ease-in-out;
+}
+
+/* TOP STAR */
+.logo-wrap::before{
+  top:-5px;
+  left:-5px;
+}
+
+/* BOTTOM STAR */
+.logo-wrap::after{
+  bottom:-5px;
+  right:-5px;
+
+  animation-delay:1s;
+}
+
+/* SPARKLE ANIMATION */
+@keyframes sparkleMove{
+
+  0%{
+    opacity:0;
+    transform:scale(.5) rotate(0deg);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.4) rotate(180deg);
+  }
+
+  100%{
+    opacity:0;
+    transform:scale(.5) rotate(360deg);
+  }
+}
 
 </style>
 </head>
@@ -929,13 +1287,13 @@ nav ul li a:hover{
     <div class="wo-clinic-name" id="wo-clinic-name" style="animation:none;opacity:0">Olive Dental Clinic</div>
     <div class="wo-tagline" id="wo-tagline" style="opacity:0">✦ &nbsp; Your Smile Is Our Priority &nbsp; ✦</div>
     <div class="wo-voice-bar" id="wo-voice-bar" style="opacity:0">
-      <span class="wo-voice-icon">🔊</span>
+      <span class="wo-voice-icon"></span>
       <div class="wo-voice-waves">
         <div class="wo-vw"></div><div class="wo-vw"></div><div class="wo-vw"></div>
         <div class="wo-vw"></div><div class="wo-vw"></div><div class="wo-vw"></div>
         <div class="wo-vw"></div>
       </div>
-      <span class="wo-voice-label">Speaking…</span>
+      <span class="wo-voice-label"></span>
     </div>
     <div class="wo-progress"><div class="wo-progress-bar"></div></div>
   </div>
@@ -950,7 +1308,9 @@ nav ul li a:hover{
 
   <a href="#" class="nav-logo">
 
-   <img src="images/logo.jpg" class="logo">
+    <div class="logo-wrap">
+      <img src="images/logo.jpg" class="nav-sparkle-logo">
+    </div>
 
     <span class="logo-text">
       Olive <span>Dental</span>
@@ -964,7 +1324,9 @@ nav ul li a:hover{
     <li><a href="#about"><i class="fa-solid fa-hospital"></i> About</a></li>
     <li><a href="#showcase"><i class="fa-solid fa-wand-magic-sparkles"></i> 3D Smile Gallery</a></li>
 <li><a href="#testimonials"><i class="fa-solid fa-star"></i> Reviews</a></li>
-
+<li><a href="#smile" onclick="toggleMenu()">
+  <i class="fa-solid fa-camera"></i> Smile Gallery
+</a></li>
 <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
   </ul>
   <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
@@ -979,6 +1341,7 @@ nav ul li a:hover{
   <a href="#about" onclick="toggleMenu()">About Us</a>
   <a href="#showcase" onclick="toggleMenu()">3D Smile Gallery</a>
   <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+   <a href="#smile" onclick="toggleMenu()">Smile Gallery</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
   <a href="#booking" onclick="toggleMenu()">📅 Book Appointment</a>
 </div>
@@ -1063,7 +1426,7 @@ nav ul li a:hover{
       <div class="service-slider">
          
 <div class="service-name">
-          <b><center style="color:yellow">Dental Implants</center></b>
+          <b><center style="color:white">Dental Implants</center></b>
         </div>
 
         <img src="https://images.pexels.com/photos/6812500/pexels-photo-6812500.jpeg" class="active">
@@ -1098,7 +1461,7 @@ nav ul li a:hover{
       <div class="service-slider">
 
 <div class="service-name">
-          <b><center style="color:yellow"> Aligners & Orthodontics</center></b>
+          <b><center style="color:white"> Aligners & Orthodontics</center></b>
         </div>
 
         <img src="https://images.pexels.com/photos/11887613/pexels-photo-11887613.jpeg" class="active">
@@ -1132,7 +1495,7 @@ nav ul li a:hover{
 
       <div class="service-slider">
         <div class="service-name">
-          <b><center style="color:yellow">  Teeth Whitening</center></b>
+          <b><center style="color:white">  Teeth Whitening</center></b>
         </div>
  
 
@@ -1168,7 +1531,7 @@ nav ul li a:hover{
       <div class="service-slider">
         
  <div class="service-name">
-          <b><center style="color:yellow">Root Canal Treatment</center></b>
+          <b><center style="color:white">Root Canal Treatment</center></b>
         </div>
         <img src="https://images.pexels.com/photos/4971541/pexels-photo-4971541.jpeg" class="active">
         <img src="https://images.pexels.com/photos/10820368/pexels-photo-10820368.jpeg">
@@ -1202,7 +1565,7 @@ nav ul li a:hover{
 
       <div class="service-slider">
         <div class="service-name">
-          <b><center style="color:yellow">Crowns & Bridges</center></b>
+          <b><center style="color:white">Crowns & Bridges</center></b>
         </div>
 
         <img src="https://images.pexels.com/photos/33748061/pexels-photo-33748061.jpeg" class="active">
@@ -1237,7 +1600,7 @@ nav ul li a:hover{
 
       <div class="service-slider">
 <div class="service-name">
-          <b><center style="color:yellow">Pediatric Dentistry</center></b>
+          <b><center style="color:white">Pediatric Dentistry</center></b>
         </div>
         <img src="https://images.pexels.com/photos/6502163/pexels-photo-6502163.jpeg" class="active">
         <img src="https://images.pexels.com/photos/7800569/pexels-photo-7800569.jpeg">
@@ -1277,7 +1640,7 @@ nav ul li a:hover{
 
       <div class="service-slider">
 <div class="service-name">
-          <b><center style="color:yellow">Cosmetic Dentistry
+          <b><center style="color:white">Cosmetic Dentistry
 </center></b>
         </div>
         <img src="https://images.pexels.com/photos/6627574/pexels-photo-6627574.jpeg" class="active">
@@ -1312,7 +1675,7 @@ nav ul li a:hover{
 
       <div class="service-slider">
 <div class="service-name">
-          <b><center style="color:yellow">Emergency Dental Care
+          <b><center style="color:white">Emergency Dental Care
 </center></b>
         </div>
         <img src="https://images.pexels.com/photos/14624608/pexels-photo-14624608.jpeg" class="active">
@@ -1542,6 +1905,7 @@ function resetTilt(element){
 <!-- ABOUT SECTION -->
 <!-- ========================= -->
 
+
 <section id="about" style="padding:100px 52px;background:var(--ivory)">
 
   <div class="about">
@@ -1641,6 +2005,7 @@ function resetTilt(element){
 <!-- ========================= -->
 
 <style>
+
 
 .about{
   display:grid;
@@ -1856,13 +2221,178 @@ revealSections();
 </script>
 
 <!-- 3D SHOWCASE SECTION -->
-<iframe
-  width="100%"
-  height="600"
-  src="https://www.youtube.com/embed/To5XAChz5rM"
-  frameborder="0"
-  allowfullscreen>
-</iframe>
+ 
+<!-- =========================
+🦷 PREMIUM 3D TEETH SECTION
+Put your GLB file inside:
+models/teeth.glb
+========================= -->
+
+<!-- MODEL VIEWER LIBRARY -->
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<section id="showcase" class="teeth-3d-section">
+
+  <div class="teeth-glow"></div>
+
+  <model-viewer
+    src="images/human_teeth.glb"
+    alt="3D Human Teeth Model"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1.2"
+    exposure="1"
+    interaction-prompt="none"
+    loading="eager"
+    disable-pan
+    style="width:100%; height:100%;">
+  </model-viewer>
+
+  <div class="teeth-content">
+    
+    <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+      Book Appointment
+    </button>
+  </div>
+
+</section>
+
+<style>
+
+/* =========================
+   SECTION — shrunk with breathing room
+========================= */
+.teeth-3d-section {
+  position: relative;
+  width: 50%;           /* not full width — gives side breathing room too */
+  max-width: 1200px;
+  height: 80vh;         /* shrunk from 100vh — top & bottom of page peeks */
+
+  margin: 20px auto;    /* top & bottom space = natural scroll zones */
+
+  border-radius: 24px;  /* rounded corners look great when floating */
+  overflow: hidden;
+
+  background: radial-gradient(circle at center,
+    #111 0%, #050505 40%, #000 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   3D MODEL
+========================= */
+model-viewer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  --progress-bar-color: transparent;
+  filter:
+    drop-shadow(0 0 40px rgba(0,229,255,0.25))
+    drop-shadow(0 0 80px rgba(255,255,255,0.08));
+}
+
+/* =========================
+   GLOW
+========================= */
+.teeth-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle,
+    rgba(0,229,255,0.18), transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1);    opacity: .7; }
+  50%  { transform: scale(1.25); opacity: 1;  }
+  100% { transform: scale(1);    opacity: .7; }
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+.teeth-content {
+  position: absolute;
+  z-index: 5;
+  top: 30px;           /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  color:#0077ff;
+  pointer-events: none;
+}
+
+.teeth-content h3 {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.teeth-content p {
+  font-size: 18px;
+  color: #9eefff;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* BUTTON — re-enable pointer events just for button */
+.teeth-content button {
+  display: block;
+  margin: 350px auto 0;  /* ← increase 40px to push down more */
+  padding: 14px 28px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #00e5ff, #0077ff);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+  pointer-events: auto;
+}
+
+.teeth-content button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,229,255,.35);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .teeth-3d-section {
+    width: 95%;
+    height: 70vh;
+    margin: 40px auto;
+    border-radius: 16px;
+  }
+
+  .teeth-content {
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+    max-width: 100%;
+  }
+
+  .teeth-content h3 { font-size: 32px; }
+  .teeth-content p  { font-size: 15px; }
+  .teeth-glow { width: 280px; height: 280px; }
+}
+
+</style>
+
 <!--whatsapp-->
 <!-- WHATSAPP FLOAT BUTTON -->
 
@@ -1969,20 +2499,21 @@ target="_blank">
 
       <ul class="booking-info-list">
 
-        <li>
-          <div class="bi-icon">📍</div>
-          Bengaluru, Karnataka
-        </li>
+      <li>
+  <div class="bi-icon">
+    <i class="fa-solid fa-location-dot"></i>
+  </div>
+  Bengaluru, Karnataka
+</li>
 
-        <li>
-          <div class="bi-icon">📞</div>
-          +91 6361169798
-        </li>
+<li>
+  <div class="bi-icon">
+    <i class="fa-solid fa-phone"></i>
+  </div>
+  +91 6361169798
+</li>
 
-        <li>
-          <div class="bi-icon">📧</div>
-          appointments@olivedental.in
-        </li>
+        
 
         <li>
           <div class="bi-icon">🕐</div>
@@ -2262,7 +2793,25 @@ target="_blank">
 
   cursor:pointer;
 }
+.bi-icon{
+  width:32px;
+  height:32px;
 
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,255,200,.1);
+
+  color:#00ffcc;
+
+  font-size:14px;
+
+  box-shadow:
+    0 0 8px rgba(0,255,200,.3);
+}
 </style>
 
 
@@ -2430,84 +2979,81 @@ function resetForm(){
 
 
 <!-- TESTIMONIALS -->
-<section id="patient-results" class="patient-results">
+<section id="testimonials" class="patient-results">
 
   <div class="section-title">
-    <span>REAL PATIENT RESULTS</span>
-    <h2>Smile Transformations & Patient Stories</h2>
-    <p>See how our treatments restore confidence and create beautiful smiles.</p>
+   
+    <h3>Smile Transformations & Patient Stories</h3>
+   
   </div>
 
   <!-- ZIRCONIA CROWN -->
 
-  <div class="result-card">
+  <!-- ZIRCONIA CROWN -->
+<div class="result-card">
 
-    <div class="result-image">
-     <img src="images/image1.jpg" class="logo">
-    </div>
+  <img src="images/image5.jpg" class="result-bg">
 
-    <div class="result-content">
+  <div class="result-overlay"></div>
 
-      <span class="badge">✓ Verified Patient Result</span>
+  <div class="result-content">
 
-      <h3>Zirconia Crown Smile Restoration</h3>
+    <span class="badge">✓ Verified Patient Result</span>
 
-      <div class="stars">★★★★★</div>
+    <h3>Zirconia Crown Smile Restoration</h3>
 
-      <p>
-        I was very conscious about my broken front tooth and avoided smiling.
-        The Zirconia Crown treatment completely transformed my smile.
-        The crown looks natural, feels comfortable, and restored my confidence.
-      </p>
+    <div class="stars">★★★★★</div>
 
-      <ul>
-        <li>Natural appearance</li>
-        <li>Durable & long-lasting</li>
-        <li>Comfortable fit</li>
-      </ul>
+    <p>
+      I was very conscious about my broken front tooth and avoided smiling.
+      The Zirconia Crown treatment completely transformed my smile.
+      The crown looks natural, feels comfortable, and restored my confidence.
+    </p>
 
-    </div>
-
-  </div>
-
-  <!-- COMPOSITE FILLING -->
-
-  <div class="result-card">
-
-    <div class="result-image">
-      <img src="images/image2.jpg" class="logo">
-    </div>
-
-    <div class="result-content">
-
-      <span class="badge">✓ Verified Patient Result</span>
-
-      <h3>Composite Filling Restoration</h3>
-
-      <div class="stars">★★★★★</div>
-
-      <p>
-        My chipped tooth affected my smile and confidence.
-        The composite filling blended perfectly with my natural teeth.
-        The treatment was quick, painless and the results were amazing.
-      </p>
-
-      <ul>
-        <li>Tooth-colored filling</li>
-        <li>Natural finish</li>
-        <li>Quick treatment</li>
-      </ul>
-
-    </div>
+    <ul>
+      <li>Natural appearance</li>
+      <li>Durable & long-lasting</li>
+      <li>Comfortable fit</li>
+    </ul>
 
   </div>
 
-</section>
+</div>
 
+<!-- COMPOSITE FILLING -->
+<div class="result-card">
+
+  <img src="images/image2.jpg" class="result-bg">
+
+  <div class="result-overlay"></div>
+
+  <div class="result-content">
+
+    <span class="badge">✓ Verified Patient Result</span>
+
+    <h3>Composite Filling Restoration</h3>
+
+    <div class="stars">★★★★★</div>
+
+    <p>
+      My chipped tooth affected my smile and confidence.
+      The composite filling blended perfectly with my natural teeth.
+      The treatment was quick, painless and the results were amazing.
+    </p>
+
+    <ul>
+      <li>Tooth-colored filling</li>
+      <li>Natural finish</li>
+      <li>Quick treatment</li>
+    </ul>
+
+  </div>
+
+</div>
 
 <!-- TESTIMONIALS -->
 
-<section class="testimonials">
+<section class="testimonials" id="Reviews">
 
   <div class="section-title">
     <h2>What Our Patients Say</h2>
@@ -2545,7 +3091,7 @@ function resetForm(){
 
 <!-- SMILE GALLERY -->
 
-<section class="gallery">
+<section id="smile" class="gallery">
 
   <div class="section-title">
     <h2>Smile Gallery</h2>
@@ -2554,10 +3100,10 @@ function resetForm(){
 
   <div class="gallery-grid">
 
-   <img src="images/image3.jpg" class="logo">
+   
+   <img src="images/image1.jpg" class="logo">
    <img src="images/image4.jpg" class="logo">
-   <img src="images/image5.jpg" class="logo">
-   <img src="images/image6.jpg" class="logo">
+   
    <img src="images/image7.jpg" class="logo">
    <img src="images/image8.jpg" class="logo">
    <img src="images/image9.jpg" class="logo">
@@ -2636,7 +3182,7 @@ margin-bottom:15px;
 
 .result-content p{
 line-height:1.8;
-color:#555;
+color:white;
 margin-bottom:20px;
 }
 
@@ -2707,6 +3253,97 @@ border-radius:50px;
 text-decoration:none;
 font-weight:700;
 }
+
+.result-card{
+  position:relative;
+  overflow:hidden;
+
+  border-radius:25px;
+
+  min-height:450px;
+
+  padding:30px;
+
+  display:flex;
+  align-items:flex-end;
+
+  color:white;
+}
+
+/* BACKGROUND IMAGE */
+.result-bg{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:1;
+}
+
+/* DARK OVERLAY */
+.result-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.25)
+  );
+
+  z-index:2;
+}
+
+/* CONTENT */
+.result-content{
+  position:relative;
+  z-index:3;
+}
+
+/* STARS */
+.stars{
+  color:#ffd700;
+  margin:10px 0;
+  font-size:18px;
+}
+
+/* BADGE */
+.badge{
+  display:inline-block;
+
+  padding:8px 14px;
+
+  border-radius:30px;
+
+  background:rgba(0,255,200,.15);
+
+  backdrop-filter:blur(10px);
+
+  color:green;
+
+  font-size:13px;
+
+  margin-bottom:15px;
+}
+.result-bg{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:translateY(-25px); /* move image little up */
+
+  transition:0.5s;
+}
+
+
   </style>
   
 
@@ -2735,9 +3372,21 @@ font-weight:700;
       <div class="map-label">View on Google Maps →</div>
     </div>
     <ul class="contact-list">
-      <li><div class="contact-icon">📍</div>930, AECS B Block, Wellington Paradise, Singasandra, Bengaluru, Karnataka 560114</li>
-     <li><div class="contact-icon">📱</div> +91 6361169798</li>
-      <li><div class="contact-icon">📧</div> appointments@olivedental.in</li>
+     <li>
+  <div class="contact-icon">
+    <i class="fa-solid fa-location-dot"></i>
+  </div>
+  930, AECS B Block, Wellington Paradise, Singasandra, Bengaluru, Karnataka 560114
+</li>
+
+<li>
+  <div class="contact-icon">
+    <i class="fa-solid fa-phone"></i>
+  </div>
+  +91 6361169798
+</li>
+
+
       
     </ul>
   </div>
@@ -2814,7 +3463,7 @@ font-weight:700;
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Olive Dental Clinic. All rights reserved.</span>
+    <span>© 2026 Olive Dental Clinic. All rights reserved.</span>
     <span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></span>
   </div>
 </footer>
