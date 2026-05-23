@@ -2370,25 +2370,67 @@ model-viewer {
 /* =========================
    MOBILE
 ========================= */
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .teeth-3d-section {
-    width: 95%;
-    height: 70vh;
-    margin: 40px auto;
-    border-radius: 16px;
+  .teeth-3d-section{
+    width:95%;
+    height:520px;
+
+    margin:20px auto;
+
+    border-radius:20px;
   }
 
-  .teeth-content {
-    left: 20px;
-    right: 20px;
-    bottom: 40px;
-    max-width: 100%;
+  /* CONTENT CENTER */
+
+  .teeth-content{
+    position:absolute;
+
+    top:20px;
+    left:0;
+    right:0;
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 15px;
   }
 
-  .teeth-content h3 { font-size: 32px; }
-  .teeth-content p  { font-size: 15px; }
-  .teeth-glow { width: 280px; height: 280px; }
+  .teeth-content h3{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .teeth-content p{
+    font-size:15px;
+  }
+
+  /* BUTTON CENTER */
+
+  .teeth-content button{
+
+    margin-top:300px;
+
+    padding:12px 24px;
+
+    font-size:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .teeth-glow{
+    width:260px;
+    height:260px;
+  }
+
 }
 
 </style>
@@ -2683,7 +2725,7 @@ target="_blank">
         class="form-submit"
         onclick="submitBooking()">
 
-          📅 Confirm Appointment
+          Confirm Appointment
 
         </button>
 
@@ -3434,31 +3476,43 @@ font-weight:700;
       <p class="footer-tagline">Modern dentistry with a gentle touch. Your family's smile is our lifelong commitment.</p>
       <div class="footer-social">
         
-        <a class="social-btn" href="https://www.instagram.com/drelzashaji?igsh=YW9pYjl2dnAydmFt" title="Instagram">📸</a>
-        
-        <a class="social-btn" href="https://www.youtube.com/@elzaclint" title="YouTube">▶</a>
-      </div>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <a class="social-btn"
+href="https://www.instagram.com/drelzashaji?igsh=YW9pYjl2dnAydmFt"
+target="_blank"
+title="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+
+<a class="social-btn"
+href="https://www.youtube.com/@elzaclint"
+target="_blank"
+title="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+</a>
+</div>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="#">General Dentistry</a></li><li><a href="#">Teeth Whitening</a></li>
-        <li><a href="#">Orthodontics</a></li><li><a href="#">Dental Implants</a></li>
-        <li><a href="#">Root Canal</a></li><li><a href="#">Crowns & Veneers</a></li>
+        <li><a href="#services">General Dentistry</a></li><li><a href="services">Teeth Whitening</a></li>
+        <li><a href="services">Orthodontics</a></li><li><a href="services">Dental Implants</a></li>
+        <li><a href="services">Root Canal</a></li><li><a href="services">Crowns & Veneers</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Clinic</h5>
       <ul>
-        <li><a href="#">About Us</a></li><li><a href="#">Our Team</a></li>
-        <li><a href="#">Testimonials</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li>
+        <li><a href="#about">About Us</a></li><li><a href="#Reviews">Reviews</a></li>
+       <li><a href="#smile">smile gallery</a></li><li><a href="#showcase">3d</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Support</h5>
       <ul>
-        <li><a href="#">Book Appointment</a></li><li><a href="#">Insurance Partners</a></li>
-        <li><a href="#">EMI Options</a></li><li><a href="#">Patient Portal</a></li><li><a href="#">Emergency Care</a></li>
+        <li><a href="#contact">Book Appointment</a></li><li>
+       <li><a href="#">Emergency Care</a></li>
       </ul>
     </div>
   </div>
@@ -3467,6 +3521,23 @@ font-weight:700;
     <span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></span>
   </div>
 </footer>
+<style>.social-btn{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#fff;
+    color:#111;
+    font-size:22px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-btn:hover{
+    transform:scale(1.1);
+}</style>
 
 <script>
 // ── WELCOME OVERLAY: VOICE + ANIMATION ──
